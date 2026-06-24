@@ -16,12 +16,12 @@ export function EasterEgg() {
       // Helper to decode Base64 on the fly.
       const d = (s: string) => atob(s);
 
-      const x7f = d("UmFuaXQgTWFuaWs=");
-      const y2k = d("aHR0cHM6Ly9naXRodWIuY29tLw==");
-      const z9m = d("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luLw==");
-      const p4q = d("UmFuaXRNYW5paw==");
-      const r8s = d("cmFuaXQtbWFuaWs=");
-      const t1u = d("VGhhbmtzIGZvciBjaGVja2luZyBvdXQgTXVsdGlOb3RlcyE=");
+      const x7f = d("QWJkdWwgTWFubmFuIEJoYXR0aQ=="); // Abdul Mannan Bhatti
+      const y2k = d("aHR0cHM6Ly9naXRodWIuY29tLw=="); // https://github.com/
+      const z9m = d("aHR0cHM6Ly9wb3J0Zm9saW8tdHdvLWJsYWNrLTQ4LnZlcmNlbC5hcHAv"); // http://portfolio-two-black-48.vercel.app/
+      const p4q = d("YWJkdWxtYW5uYW5iaGF0dGk5MzYtbGd0bQ=="); // abdulmannanbhatti936-lgtm
+      const r8s = d("YWJkdWxtYW5uYW5iaGF0dGk5MzY="); // abdulmannanbhatti936
+      const t1u = d("VGhhbmtzIGZvciBjaGVja2luZyBvdXQgTHVtZSBOb3RlcyE="); // Thanks for checking out Lume Notes!
 
       // A refined style palette for a direct, impressive console output.
       const styles = {
@@ -40,7 +40,7 @@ export function EasterEgg() {
 
       // The grand reveal, structured for immediate impact with a dash of humor.
       console.log(
-        `%c🎉 You found the secret developer lair! 🎉\n\n%c👋 Hi, I'm ${x7f} - The Code Wizard 🧙‍♂️\n\n%c🔗 GitHub: %c${y2k}${p4q}\n%c🔗 LinkedIn: %c${z9m}${r8s}\n\n%c🤫 Psst... If you're seeing this, you're either:\n   • A fellow developer with excellent detective skills\n   • My future self debugging something\n   • Just really bored and poking around\n\n%c${t1u} (And thanks for not breaking anything! 😉)`,
+        `%c🎉 You found the secret developer lair! 🎉\n\n%c👋 Hi, I'm ${x7f}\n\n%c🔗 GitHub: %c${y2k}${p4q}\n%c🔗 Portfolio: %c${z9m}\n\n%c🤫 Psst... If you're seeing this, you're either:\n   • A fellow developer with excellent detective skills\n   • My future self debugging something\n   • Just really bored and poking around\n\n%c${t1u} (And thanks for not breaking anything! 😉)`,
         styles.title,
         styles.subtitle,
         styles.label,

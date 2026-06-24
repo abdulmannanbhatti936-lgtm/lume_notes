@@ -77,11 +77,6 @@ export async function POST(
     }
 
     // @ts-ignore
-    console.log(
-      "Available prisma models in route:",
-      Object.keys(prisma).filter(k => !k.startsWith("_") && !k.startsWith("$"))
-    );
-    // @ts-ignore
     const existingSharing = await (prisma as any).sharedFolder.findUnique({
       where: { folder_id: id },
     });

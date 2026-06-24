@@ -166,7 +166,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
   useEffect(() => {
     const timer = setTimeout(() => {
       isStabilizing.current = false;
-      console.log("Note stabilized - now tracking user changes.");
     }, 1000);
     return () => clearTimeout(timer);
   }, [noteId]);
@@ -458,10 +457,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
     });
 
     if (otherWithTitle && !isTitleFocused.current) {
-      console.log(
-        "Syncing title from collaborator:",
-        (otherWithTitle.presence as any).title
-      );
       setCurrentTitle((otherWithTitle.presence as any).title);
     }
   }, [others, currentTitle]);
@@ -605,7 +600,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
       // 1. Sync Save Timestamp
       const lastSave = metadataMap.get("lastSaveTimestamp");
       if (lastSave) {
-        console.log("☁️ Global Save Signal Received - resetting dirty: false");
         onDirtyChange(false);
       }
 
@@ -663,8 +657,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
 
   useEffect(() => {
     if (note && editor && !contentInitialized && isSynced) {
-      console.log("Sync complete. Checking for initial content load...");
-
       setCurrentTitle(note.title);
 
       const { state, view } = editor;
@@ -673,14 +665,7 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
       const yContent = doc.getXmlFragment("content");
       const isYjsEmpty = yContent.length === 0;
 
-      console.log(
-        `Presence Check - Editor Empty: ${isEditorEmpty}, Yjs Empty: ${isYjsEmpty}`
-      );
-
       if (isEditorEmpty && isYjsEmpty && note.content) {
-        console.log(
-          "Cloud room is empty. Initializing with database backup..."
-        );
         const sanitizeContent = (node: any): any => {
           if (!node || typeof node !== "object") return node;
           if (node.type === "text" && !node.text) return null;
@@ -741,7 +726,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
 
   // Reset dirty state when a new note is loaded
   useEffect(() => {
-    console.log("Note changed, resetting dirty: false");
     onDirtyChange(false);
   }, [noteId, onDirtyChange]);
 
@@ -768,7 +752,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
         // CRITICAL: Global Save Signal - notify ALL collaborators
         doc.getMap("metadata").set("lastSaveTimestamp", Date.now());
 
-        console.log("✅ Save successful - resetting dirty: false");
         toast.success("Note saved manually!", { id: toastId });
         onDirtyChange(false);
       } catch (err) {
@@ -807,10 +790,6 @@ export const NoteEditorInner = React.memo(function NoteEditorInner({
     }
 
     if (newTitle !== currentTitle) {
-      console.log(
-        "📝 Title updated - syncing to collaborators and setting dirty: true"
-      );
-
       // Update local state and Yjs doc
       setCurrentTitle(newTitle);
       const yTitle = doc.getText("title");

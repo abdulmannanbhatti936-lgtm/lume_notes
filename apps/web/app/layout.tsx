@@ -17,15 +17,29 @@ const fontMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Lume Notes",
+    default: "Lume Notes - Abdul Mannan Bhatti",
     template: "%s | Lume Notes",
   },
   description:
-    "Advanced note-taking for teams. Smart writing assistance, secure organization, and seamless collaboration.",
+    "Advanced note-taking for teams. Smart writing assistance, secure organization, and seamless collaboration. Built by Abdul Mannan Bhatti.",
+  authors: [
+    {
+      name: "Abdul Mannan Bhatti",
+      url: "https://github.com/abdulmannanbhatti936-lgtm",
+    },
+  ],
+  creator: "Abdul Mannan Bhatti",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Lume Notes",
+    description:
+      "Advanced note-taking for teams. Smart writing assistance, secure organization, and seamless collaboration.",
+    type: "website",
+    url: "http://portfolio-two-black-48.vercel.app/",
   },
 };
 

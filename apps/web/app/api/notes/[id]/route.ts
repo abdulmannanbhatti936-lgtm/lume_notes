@@ -150,7 +150,6 @@ export async function PUT(
                 content: note.content as any,
               },
             });
-            console.log(`[DEBUG] Created new history entry for note: ${id}`);
           }
         }
       }

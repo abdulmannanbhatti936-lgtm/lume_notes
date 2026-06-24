@@ -26,12 +26,10 @@ export async function GET(
       return NextResponse.json({ error: "Note not found" }, { status: 404 });
     }
 
-    console.log(`[DEBUG] Fetching history for note: ${id}`);
     const history = await prisma.noteHistory.findMany({
       where: { note_id: id },
       orderBy: { created_at: "desc" },
     });
-    console.log(`[DEBUG] Found ${history.length} history entries`);
 
     return NextResponse.json(history);
   } catch (error) {

@@ -224,7 +224,6 @@ function NotesDashboardContent() {
   // Safety reset: every time we switch to a new note, it starts as 'clean'
   useEffect(() => {
     setIsEditorDirty(false);
-    console.log("Parent reset: switching note, setting dirty: false");
   }, [selectedId]);
 
   const saveCurrentNoteRef = useRef<(() => Promise<void>) | null>(null);
@@ -301,7 +300,6 @@ function NotesDashboardContent() {
     if (noteParam && noteParam !== selectedId) {
       const noteExists = notes.some(note => note.id === noteParam);
       if (noteExists) {
-        console.log("URL Sync: Switching to note from URL param:", noteParam);
         setSelectedId(noteParam);
         setIsEditorDirty(false); // Reset dirty flag when switching via URL
       }
@@ -316,10 +314,6 @@ function NotesDashboardContent() {
     const noteParam = searchParams.get("note");
     if (!noteParam && notes[0]!?.id) {
       const firstNoteId = notes[0]!?.id;
-      console.log(
-        "Initial Load: No note in URL, defaulting to first note:",
-        firstNoteId
-      );
       setSelectedId(firstNoteId);
       const newSearchParams = new URLSearchParams(searchParams);
       newSearchParams.set("note", firstNoteId);

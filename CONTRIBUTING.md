@@ -40,8 +40,8 @@ lume notes is a multi-tenant notes application built with Next.js, featuring rol
 1. **Fork and Clone the Repository**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/lucide-note.git
-   cd lucide-note
+   git clone https://github.com/abdulmannanbhatti936-lgtm/lume_notes.git
+   cd lume_notes
    ```
 
 2. **Install Dependencies**
@@ -60,7 +60,7 @@ lume notes is a multi-tenant notes application built with Next.js, featuring rol
    Add the following to `.env`:
 
    ```env
-   DATABASE_URL="postgresql://username:password@localhost:5432/lucide-note"
+   DATABASE_URL="postgresql://username:password@localhost:5432/lume_notes"
    NEXTAUTH_URL="http://localhost:3000"
    NEXTAUTH_SECRET="your-nextauth-secret-here"
    ```
@@ -349,7 +349,7 @@ Use the feature request template and include:
 
 For general questions or discussions:
 
-- Use [GitHub Discussions](https://github.com/1xcoder-1/lume_notes/discussions)
+- Use [GitHub Discussions](https://github.com/abdulmannanbhatti936-lgtm/lume_notes/discussions)
 - Check existing issues and discussions first
 
 ## Code Review

@@ -1,7 +1,14 @@
 {
-  "name": "lucide-note",
+  "name": "lume-notes-personal",
   "version": "0.0.1",
   "private": true,
+  "author": "Abdul Mannan Bhatti <abdulmannanbhatti936@gmail.com>",
+  "license": "MIT",
+  "homepage": "http://portfolio-two-black-48.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdulmannanbhatti936-lgtm/lume_notes"
+  },
   "scripts": {
     "build": "turbo build",
     "commit": "cz",

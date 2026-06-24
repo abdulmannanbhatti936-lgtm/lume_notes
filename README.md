@@ -1,11 +1,11 @@
-<img width="70" src="https://raw.githubusercontent.com/1xcoder-1/lume_notes/refs/heads/main/apps/web/public/logo.svg" alt="Lume Notes Logo" />
+<img width="70" src="https://raw.githubusercontent.com/abdulmannanbhatti936-lgtm/lume_notes/refs/heads/main/apps/web/public/logo.svg" alt="Lume Notes Logo" />
 
 # Lume Notes
 
-A modern, full-stack notes app for organizations. Built with real-time collaboration, AI features, and secure multi-tenancy.
+A modern, full-stack notes app for organizations. Built with real-time collaboration, AI features, and secure multi-tenancy. Created by Abdul Mannan Bhatti.
 
 > [!NOTE]
-> This is a project for learning and experimentation. Use it as a reference or a starting point for your own apps.
+> This is my custom version of a project for learning and experimentation. Use it as a reference or a starting point for your own apps.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org/)
@@ -18,7 +18,7 @@ A modern, full-stack notes app for organizations. Built with real-time collabora
 ### 1. Setup
 
 ```bash
-git clone https://github.com/1xcoder-1/lume_notes.git
+git clone https://github.com/abdulmannanbhatti936-lgtm/lume_notes.git
 cd lume_notes
 pnpm install
 ```
@@ -95,4 +95,4 @@ Detailed guides for all major features:
 
 MIT — Build something great!
 
-<div align="center">Built for creators and teams.</div>
+<div align="center">Built for creators and teams. Created by Abdul Mannan Bhatti - <a href="https://github.com/abdulmannanbhatti936-lgtm">GitHub</a> | <a href="http://portfolio-two-black-48.vercel.app/">Portfolio</a></div>
